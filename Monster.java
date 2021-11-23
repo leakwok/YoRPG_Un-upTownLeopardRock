@@ -70,4 +70,15 @@ public class Monster extends Character {
     _hitPts = _hitPts - damageInflicted;
   }
 
-}//end class Monster
+  // our code
+  
+		/* // isAlive() method
+		public boolean isAlive(){
+			return true;
+		}
+		
+		// attack() method
+		public int attack( Protagonist p){
+			return -1; // should be the attack damage value
+		} */
+}
