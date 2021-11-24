@@ -1,5 +1,13 @@
 /*
-  class Monster -- Represents random incarnations of 
+Team Un-upTown Leopard Rock: Lea Kwok, Raven (Ruiwen) Tang
+APCS
+L01: An Adventurer is You!
+2021-11-22
+time spent: 00.5 hour
+*/
+
+/*
+  class Monster -- Represents random incarnations of
   the adventurer's natural enemy in Ye Olde RPG
 **/
 
@@ -43,8 +51,8 @@ public class Monster extends Character {
   /**
      int attack(Warrior) -- simulates attack on a Warrior
      pre:  Input not null
-     post: Calculates damage to be inflicted, flooring at 0. 
-     Calls opponent's lowerHP() method to inflict damage. 
+     post: Calculates damage to be inflicted, flooring at 0.
+     Calls opponent's lowerHP() method to inflict damage.
      Returns damage dealt.
   **/
   public int attack( Protagonist opponent ) {
@@ -71,12 +79,12 @@ public class Monster extends Character {
   }
 
   // our code
-  
+
 		/* // isAlive() method
 		public boolean isAlive(){
 			return true;
 		}
-		
+
 		// attack() method
 		public int attack( Protagonist p){
 			return -1; // should be the attack damage value

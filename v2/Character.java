@@ -1,3 +1,11 @@
+/*
+Team Un-upTown Leopard Rock: Lea Kwok, Raven (Ruiwen) Tang
+APCS
+L01: An Adventurer is You!
+2021-11-22
+time spent: 00.5 hour
+*/
+
 public class Character {
       // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
         public int _hitPts;
@@ -5,7 +13,7 @@ public class Character {
         public int _defense;
         public double _attack;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
+
 
     /**
       boolean isAlive() -- tell whether I am alive
@@ -48,7 +56,7 @@ public class Character {
 
   /**
     int getDefense() -- returns value of defense attribute
-    pre: 
+    pre:
     post: returns value of defense attribute
     **/
   public int getDefense(){

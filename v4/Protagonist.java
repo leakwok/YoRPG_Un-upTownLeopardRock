@@ -1,3 +1,11 @@
+/*
+Team Un-upTown Leopard Rock: Lea Kwok, Raven (Ruiwen) Tang
+APCS
+L01: An Adventurer is You!
+2021-11-23
+time spent: 2.00 hour
+*/
+
 /**
   class Protagonist -- protagonist of Ye Olde RPG
   **/
@@ -51,4 +59,3 @@ public class Protagonist extends Character {
     }
 
 }
-
