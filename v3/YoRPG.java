@@ -11,10 +11,12 @@
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  * 
  * DISCO:
- *	- do we need a default constructor to have an overloaded constructor?
- 	- 
+ *	- It is possible to use overloaded constructors without default constructors (see Fairy.java, Elf.java, and Wizard.java, which have constructors that take in a name parameter). However, one just cannot use this().
+ *	- Initialize variables as instance variables if you want to use them in different methods! 
+ *	- 
  * QCC:
- * 
+ *
+ * OUR DRIVER MODS:
  **********************************************/
 
 import java.io.*;
@@ -23,6 +25,8 @@ import java.util.*;
 public class YoRPG {
 
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
+    int monsterChoice;
+    int protagChoice;
 
   //change this constant to set number of encounters in a game
   public final static int MAX_ENCOUNTERS = 5;
@@ -76,7 +80,24 @@ public class YoRPG {
 	    difficulty = Integer.parseInt( in.readLine() );
     }
     catch ( IOException e ) { }
-
+    s = "\nIntrepid protagonist, what doth thy born thyself? (Pick your protagonist): \n";
+    s += "\t1: Fairy: " + Fairy.about() + " \n";
+    s += "\t2: Elf: " + Elf.about() + "\n";
+    s += "\t3: Wizard: " + Wizard.about() + "\n";
+    System.out.print( s );
+    try {
+	protagChoice = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+    s = "\nIntrepid protagonist, what doth thy dare to face? (Pick your opponent): \n";
+    s += "\t1: Ogre: " + Ogre.about() + "\n";
+    s += "\t2: Dragon: " + Dragon.about() + "\n";
+    s += "\t3: Snowman: " + Snowman.about() + "\n";
+    System.out.print ( s );
+    try {
+	monsterChoice = Integer.parseInt ( in.readLine() );
+    }
+    catch ( IOException e ) { }
     s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
@@ -86,7 +107,15 @@ public class YoRPG {
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if( protagChoice == 1){
+    	pat = new Fairy( name );
+    }
+    else if(protagChoice == 2){
+	pat = new Elf( name );
+    }
+    else{
+	pat = new Wizard( name );
+    }
 
   }//end newGame()
 
@@ -105,8 +134,15 @@ public class YoRPG {
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
-
-	    smaug = new Monster();
+	    if( monsterChoice == 1){
+	    	smaug = new Ogre();
+	    }
+	    else if(monsterChoice == 2){
+		smaug = new Dragon();
+	    }
+	   else{
+		smaug = new Snowman();
+       	    }
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -175,9 +211,10 @@ public class YoRPG {
     encounters++;
     System.out.println();
     }
-    /*================================================
 
     System.out.println( "Thy game doth be over." );
+    /*================================================
+
 	  ================================================*/
   }//end main
 

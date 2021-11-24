@@ -3,7 +3,7 @@ public class Character {
         protected int _hitPts;
         protected int _strength;
         protected int _defense;
-        protected  double _attack;
+        protected double _attack;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
 
@@ -23,10 +23,10 @@ public class Character {
       Calls opponent's lowerHP() method to inflict damage.
       Returns damage dealt.
       **/
-    public int attack( Monster opponent ) {
+    public int attack( Character opponent ) {
 
         int damage = (int)( (_strength * _attack) - opponent.getDefense() );
-        //System.out.println( "\t\t**DIAG** damage: " + damage );
+//        System.out.println( "\t\t**DIAG** damage: " + damage );
 
         if ( damage < 0 )
             damage = 0;

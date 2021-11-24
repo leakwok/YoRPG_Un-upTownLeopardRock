@@ -6,10 +6,6 @@
 public class Monster extends Character {
 
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-  private int _hitPts;
-  private int _strength;
-  private int _defense;
-  private double _attack;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -27,18 +23,7 @@ public class Monster extends Character {
 
 
   // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
-  public int getDefense() { return _defense; }
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-  /**
-     boolean isAlive() -- tell whether I am alive
-     post: returns boolean indicated alive or dead
-  **/
-  public boolean isAlive() {
-    return _hitPts > 0;
-  }
-
 
   /**
      int attack(Warrior) -- simulates attack on a Warrior
@@ -61,24 +46,4 @@ public class Monster extends Character {
   }//end attack
 
 
-  /**
-     void lowerHP(int) -- lowers life by input value
-     pre:  Input >= 0
-     post: Life instance var is lowered by input ammount.
-  **/
-  public void lowerHP( int damageInflicted ) {
-    _hitPts = _hitPts - damageInflicted;
-  }
-
-  // our code
-  
-		/* // isAlive() method
-		public boolean isAlive(){
-			return true;
-		}
-		
-		// attack() method
-		public int attack( Protagonist p){
-			return -1; // should be the attack damage value
-		} */
 }
