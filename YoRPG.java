@@ -19,12 +19,27 @@ time spent: 2.00 hour
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  *
  * DISCO:
- *	- It is possible to use overloaded constructors without default constructors (see Fairy.java, Elf.java, and Wizard.java, which have constructors that take in a name parameter). However, one just cannot use this().
- *	- Initialize variables as instance variables if you want to use them in different methods!
- *	-
+ *      - It is possible to use overloaded constructors without default constructors (see Fairy.java, Elf.java, and Wizard.java, which have constructors that take in a name parameter)>
+ *      - Initialize variables as instance variables if you want to use them in different methods! 
+ *      - N from class: A protected instance variable is accessible by a class and all its subclasses. For example, _hitpoints in Protagonist is accessible by Protagonist, Fairy, Elf,>
+ *      - We can print out the static about() method of each class when allowing the user to pick their characters.
  * QCC:
- *
+ *      - Protagonist is-a Character.
+ *      - Fairy is-a Protagonist.
+ *      - Elf is-a Protagonist.
+ *      - Wizard is-a Protagonist.
+ *      - Monster is-a Character.
+ *      - Ogre is-a Monster.
+ *      - Dragon is-a Monster.
+ *      - Snowman is-a Monster.
+ *              OUR INHERITANCE TREE
+ *                      Character
+ *      Protagonist                     Monster
+ * Fairy   Elf  Wizard           Ogre  Dragon  Snowman
  * OUR DRIVER MODS:
+ *      - created instance variables monsterChoice and protagChoice to store the number corresponding to the character's choice of opponent and protagonist role, respectively.
+ *      - added selection phase to newGame(), which printed out explanatory questions and Monster + Protagonist subclass choices, with their about() methods.
+ *      - added if statements to playTurn() to initialize and Protagonist pat and Monster smaug to the player's choices.
  **********************************************/
 
 import java.io.*;
