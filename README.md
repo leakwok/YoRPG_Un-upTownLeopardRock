@@ -27,7 +27,7 @@ v4 changes:
 * For future developments
 
 Future Additions:
-* Adding more Protagonists and Monsters
+* Add more Protagonists and Monsters
 * Add NPC as a subclass of Character for more variety in gameplay 
     * Can hurt both Protagonists and Monsters
 * Add a level system based on how many Monsters/NPCs the player defeats
